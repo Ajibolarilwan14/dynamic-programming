@@ -8,25 +8,30 @@
 # Your function should return a list of all possible permutations of the string str.
 
 # permutations(str) = ["abc", "acb", "bac", "bca", "cab", "cba"]
-# Function to join a list back to a string
 from os import stat
+import string
 
 
 def toString(list):
     return ''.join(list)
 
-def permutations(list, start, end):
-#     #base case
-    if start is end:
-        return toString(list)
-    #recurse function
-    else:
-        for i in range(start, end+1):
-            list[start], list[i] = list[i], list[start]
-            permutations(list, start+1, end)
-            list[start], list[i] = list[i], list[start]
+# Solution 1
+# def permutations(list, start, end):
+# #     #base case
+#     if start == end:
+#         return toString(list)
+#     #recurse function
+#     else:
+#         for i in range(start, end+1):
+#             list[start], list[i] = list[i], list[start]
+#             permutations(list, start+1, end)
+#             temp = list[start], list[i] = list[i], list[start]
+#             return temp
+# string = 'ABC'
+# n = len(string)
+# a = list(string)
 
-
+# print(permutations(a, 0, n-1))
 
 # def temp(list, s, e):
 #     for i in range(s, e+1):
