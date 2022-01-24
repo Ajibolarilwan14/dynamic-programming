@@ -44,7 +44,7 @@ def countChar(str, char):
   else:
     return countChar(str[1:], char)
 
-print(countChar('Ajibola', 'a'))
+# print(countChar('Ajibola', 'a'))
 
 # 2. We are going to discuss Fibonacci numbers in the next lesson, but why don’t you take a look at the problem now that you know how simple recursion actually is!
 
