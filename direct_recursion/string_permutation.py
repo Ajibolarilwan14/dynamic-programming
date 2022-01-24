@@ -41,3 +41,22 @@ def toString(list):
 #         return t
 
 # print(temp(['A', 'B', 'C'], 0, 2))
+
+# Solution 2
+def permutations(str) -> list :
+    #base case
+    if str is "":
+        return [""]
+    
+    permutation = []
+    for char in str:
+    #recursive function/step
+        subpermutation = permutations(str.replace(char, "", 1))
+        for each in subpermutation:
+            permutation.append(char + each)
+    return permutation
+    #return type must be a list
+
+print(permutations('abcd'))
+
+
