@@ -26,6 +26,16 @@ def isSafe(i, j, board):
         return False
   return True 
 
+def nQueens(r, n, board):
+    #base case, when queens have been placed in all rows then return
+    if r == n:
+        return True, board
+        #else in r-th row, need to check for every box whether it is suitable/safe to place queen
+    for i in range(n):
+        if isSafe(r, i, board):
+            #if i-th columns is safe to place queen, the I can place the queen and check recursively for other rows
+            
+
 def placeNQueens(n, board):
 
   '''
