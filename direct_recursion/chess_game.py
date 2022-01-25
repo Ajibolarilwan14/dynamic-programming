@@ -34,7 +34,15 @@ def nQueens(r, n, board):
     for i in range(n):
         if isSafe(r, i, board):
             #if i-th columns is safe to place queen, the I can place the queen and check recursively for other rows
-            
+            board[r][i] = 'q'
+            okay, newboard = nQueens(r+1, n, board)
+            #if all next queens were place correctly, recursive call should return true, and true should be return here
+            if okay:
+                return True, newboard
+            #else this is not a safe/suitable box to place queen, need to check for next box
+            board[r][i] = '-'
+    return False, board
+
 
 def placeNQueens(n, board):
 
