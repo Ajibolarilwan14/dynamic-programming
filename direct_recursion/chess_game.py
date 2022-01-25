@@ -50,7 +50,17 @@ def placeNQueens(n, board):
   To check whether index i,j is safe to place queen call isSafe(i, j, board)
   True means it is safe, False means it is not
   '''
-  return board
+#   return board
+  return nQueens(0, n, board)[1]
+
+def main():
+    n = 4
+    board = [["-" for _ in range(n)] for _ in range(n)]
+    qboard = placeNQueens(n, board)
+    qboard = "\n".join(["".join(x) for x in qboard])
+    print(qboard)
+
+main()
 
 l = ['q', 't', 'p', 'i', 'u']
 print(isSafe('s', 'm', l))
