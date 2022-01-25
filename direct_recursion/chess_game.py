@@ -62,5 +62,5 @@ def main():
 
 main()
 
-l = ['q', 't', 'p', 'i', 'u']
-print(isSafe('s', 'm', l))
+# l = ['Ajibola', 'RIlwan', 'Olaide', 'Adebayo']
+# print(l[1][0])
